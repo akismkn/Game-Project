@@ -9,4 +9,4 @@ In this version you can choose between three Elements :
 
 
 
-Live Demo : https://github.io/akismkn/Game-Project
+Live Demo : https://akismkn.github.io/Game-Project
