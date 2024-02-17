@@ -1,27 +1,22 @@
-/* CPU CHOICE */
+// CPU CHOICE 
 let getComputerChoice = () => {
     let choices = ['fire', 'water', 'grass'];
     let random = Math.floor(Math.random() * choices.length);
     return choices[random];
 }
 
-/* PLAYER CHOICE */
-let playerSelection = () => {
-    let choice;
-    do {
-        choice = prompt('Enter your choice (fire, water, or grass):');
-        choice = choice.toLowerCase();
-        if (choice === 'fire' || choice === 'water' || choice === 'grass') {
-            return choice;
-        } else {
-            alert('Invalid choice. Please enter fire, water, or grass.');
-        }
-    } while (true);
+// PLAYER CHOICE 
+let playerSelection = (buttonNumber) => {
+    switch (buttonNumber) {
+        case 1 : return 'fire'
+        case 2 : return 'water'
+        case 3 : return 'grass'
+    }
 }
 
-/* START ROUND */
-let roundStart = () => {
-    let playerChoice = playerSelection();
+// START ROUND 
+let roundStart = (buttonNumber) => {
+    let playerChoice = playerSelection(buttonNumber);
     let computerChoice = getComputerChoice();
 
     switch (playerChoice) {
@@ -56,3 +51,14 @@ let roundStart = () => {
             console.error('Invalid player choice');
     }
 }
+
+//  Get all elements with the class "elementButton"
+var elementButtons = document.querySelectorAll('.elementButton');
+
+// Add an event listener to each button
+elementButtons.forEach(function(button, index) {
+    button.addEventListener('click', function() {
+        // Pass the button number (index + 1) to roundStart
+        roundStart(index + 1);
+    });
+});
