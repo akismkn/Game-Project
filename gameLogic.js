@@ -1,9 +1,9 @@
 // Determine the winner based on choices
 let determineWinner = (playerChoice, computerChoice) => (
     (playerChoice === computerChoice) ? 'Tie' :
-    (playerChoice === 'fire' && computerChoice === 'grass') ||
-    (playerChoice === 'water' && computerChoice === 'fire') ||
-    (playerChoice === 'grass' && computerChoice === 'water') ? 'You Win!' : 'You Lose!'
+    (playerChoice === 'Fire' && computerChoice === 'Grass') ||
+    (playerChoice === 'Water' && computerChoice === 'Fire') ||
+    (playerChoice === 'Grass' && computerChoice === 'Water') ? 'You Win!' : 'You Lose!'
 );
 
 // Display the result
@@ -18,7 +18,7 @@ let displayResult = (result, playerChoice, computerChoice) => {
             resultDisplay.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
             break;
         case 'You Lose!':
-            resultDisplay.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
+            resultDisplay.textContent = `You Lose! ${playerChoice} can\'t beat ${computerChoice}`;
             break;
         default:
             console.error('Invalid result');
