@@ -2,3 +2,117 @@
     margin: 0;
     padding: 0;
 }
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #393e46;
+}
+
+.body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    min-height: 100%;
+}
+
+
+.header, .footer{
+    background-color: #1b1e22;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.image-score {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 24px;
+}
+
+.section--2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('images/popup.jpg');
+    padding: 20px;
+    border: 2px solid #333;
+    text-align: center;
+    z-index: 999;
+    font-size: 40px;
+}
+
+.popup button {
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Adjust the transparency (0.5 for semi-transparent) */
+    z-index: 998; 
+}
+
+
+/*                    */
+
+.elementButton {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #545b64;
+}
+
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.fireBtn {
+    background-image: url('images/fire.png');
+}
+
+.waterBtn {
+    background-image: url('images/water.png');
+}
+
+.grassBtn {
+    background-image: url('images/grass.png');
+}
